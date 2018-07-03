@@ -15,7 +15,7 @@ install:
   - conda info -a
   - conda config --add channels conda-forge;
   - conda install tectonic
-scripts:
+script:
   - if [ -n "$TRAVIS_TAG" ]; then tectonic cs/ethan-resume.xtx -p; fi; # If this is tagged, build the latex and the pdf to be released.
 deploy:
   - provider: releases
