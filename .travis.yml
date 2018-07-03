@@ -1,6 +1,3 @@
-language: python
-python:
-  - 3.5
 before_deploy:
   - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
 deploy:
