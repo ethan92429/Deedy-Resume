@@ -1,4 +1,5 @@
-before_deploy:
+install:
+scripts:
   - if [ -n "$TRAVIS_TAG" ]; then ./build_pdf.sh; fi; # If this is tagged, build the latex and the pdf to be released.
 deploy:
   - provider: releases
