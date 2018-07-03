@@ -13,6 +13,7 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
+  - conda config --add channels conda-forge;
   - conda install tectonic
 scripts:
   - if [ -n "$TRAVIS_TAG" ]; then tectonic cs/ethan-resume.xtx -p; fi; # If this is tagged, build the latex and the pdf to be released.
